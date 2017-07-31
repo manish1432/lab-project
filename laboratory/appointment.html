@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Appointment</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+		
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			<header class="site-header collapsed-nav" data-bg-image="">
+				<div class="container">
+					<div class="header-bar">
+						<a href="index.html" class="branding">
+							<img src="images/logo.png" alt="" class="logo">
+							<div class="logo-type">
+								<h1 class="site-title">Company name</h1>
+								<small class="site-description">Tagline goes here</small>
+							</div>
+						</a>
+
+						<nav class="main-navigation">
+							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="home menu-item current-menu-item"><a href="index.html"><img src="images/home-icon.png" alt="Home"></a></li>
+								<li class="menu-item"><a href="services.html">Our Services</a></li>
+								<li class="menu-item"><a href="tests.html">Our Tests</a></li>
+								<li class="menu-item"><a href="packages.html">Our Packages</a></li>
+								<li class="menu-item"><a href="appointment.html">Book Your Appointment</a></li>
+								<li class="menu-item"><a href="about.html">About</a></li>
+								<li class="menu-item"><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+			</header>
+			
+			<div class="page-head" data-bg-image="images/science.jpg">
+				<div class="container">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h2 class="page-title">Get Your Appointment Done Here!</h2>
+					<small></small>
+				</div>
+			</div>
+			
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="container">
+								  <form action="/action_page.php" name="myform" method="post" onsubmit="return validateform()">
+
+									<label for="fname">First Name: </label>
+									<input type="text" id="firstname" name="fname" placeholder="Your name.." style=" width: 40%" />
+
+									<label for="lname">Last Name: </label>
+									<input type="text" id="lastname" name="lname" placeholder="Your last name.." style=" width: 40%" required /><br><br>
+									
+									<label for = "contact">Mobile Number 1: <label>
+									<input type = "mobile" placeholder = "+91" style = "width:50px;height:40px" name = "contact1" id = "stdCode" />
+									<input type = "mobile" placeholder = "9768619380" style = "width:10%" name = "contact01" id = "mobileN" required />
+									
+									<label for = "contact">Mobile Number 2: <label>
+									<input type = "mobile" placeholder = "+91" style = "width:50px;height:40px" name = "contact" id = "stdCode" />
+									<input type = "mobile" placeholder = "8097769842" style = "width:10%" name = "contact" id = "mobileN" >
+									
+									<label>Email ID: </label>
+									<input type = "email" placeholder = "djvinit" style = "width:25%" name = "email" id = "eID" required />
+									<input type = "charset" value = "@" style = "width:40px;height:40px" name = "char1" id = "charAt" disabled />
+									<input type = "domain" placeholder = "gmail.com" style = "width:10%" name = "domainName" id = "Dname" required /><br><br>
+									
+									<label>Referred Doctor Name: </label>
+									<input type = "text" value = "Self" id = "RefDoc" name = "DocName" style = "width: 30%" >
+									
+									<label>Appointment Date: </label>
+									<input type = "date" min="2017-08-01" style = "width:15%" id = "appoint" required />
+									
+									<label>Apointment Time: </label>
+									<select required>
+										<option value = "" id = "">Hrs</option>
+										<option value = "" id = "">1</option>
+										<option value = "" id = "">2</option>
+										<option value = "" id = "">3</option>
+										<option value = "" id = "">4</option>
+										<option value = "" id = "">5</option>
+										<option value = "" id = "">6</option>
+										<option value = "" id = "">7</option>
+										<option value = "" id = "">8</option>
+										<option value = "" id = "">9</option>
+										<option value = "" id = "">10</option>
+										<option value = "" id = "">11</option>
+										<option value = "" id = "">12</option>
+									</select>
+									
+									<label style = "font-size:25px">:</label>
+									<select required>
+										<option value = "" id = "">Min</option>
+										<option value = "" id = "">00</option>
+										<option value = "" id = "">30</option>
+									</select>
+									
+									<select required>
+										<option value = "" id = "">am</option>
+										<option value = "" id = "">pm</option>
+									</select>
+									
+									<br><br>
+									<label for="address">Address: </label>
+									<textarea id="subject" name="address" placeholder="Write something.." style=" width: 100%;height:100px" required></textarea><br><br>
+									
+									<hr>
+									<h1 style = "text-align:center">Prefered Tests</h1>
+									
+									<label for="X-Ray">X-Ray</label>
+									<input type = "checkbox" name = "xray" />
+									
+									<label for="X-Ray">X-Ray</label>
+									<input type = "checkbox" name = "xray">
+									
+									<label for="packages">Packages: </label>
+									<select id="packages" name="packages" multiple>
+									  <option value="lipid">Lipid Profile</option>
+									  <option value="liver">Liver Function Test (LFT)</option>
+									  <option value="kidney">Kidney Profile (RFT)</option>
+									  <option value="fever max">Fever Profile (Maxi)</option>
+									  <option value="fever min">Fever Profile (Mini)</option>
+									  <option value="antenatal">Antenatal Care (Anc) Profile</option>
+									  <option value="arthritis">Arthritis Profile</option>
+									  <option value="cardiac">Cardiac Injury Profile</option>
+									  <option value="hypertension">Hypertension Profile</option>
+									  <option value="coagulation">Coagulation Profile</option>
+									  <option value="diabetes">Diabetes Profile</option>
+									  <option value="female">Female Infertility Profile</option>
+									  <option value="male">Male Infertility Profile</option>
+									  <option value="anaemia">Anaemia Profile</option>
+									  <option value="hepatities">Hepatitis Profile</option>
+									  <option value="sma">SMA 12 + 2</option>
+									  <option value="thalassemia">Thalassemia Studies</option>
+									  <option value="body profile">Total Body Profile</option>
+									</select>
+									
+									<label>Tests: </label>
+									<select multiple>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">HEMATOLOGY TEST</option>
+										<option value = "" id = "">CBC</option>
+										<option value = "" id = "">ESR</option>
+										<option value = "" id = "">HB</option>
+										<option value = "" id = "">MP</option>
+										<option value = "" id = "">MP Antigen</option>
+										<option value = "" id = "">Platelet Count</option>
+										<option value = "" id = "">Complete Haemogram</option>
+										<option value = "" id = "">Reticulocyte Count</option>
+										<option value = "" id = "">Microfilaria</option>
+										<option value = "" id = "">PT/PTT</option>
+										<option value = "" id = "">BT/CT</option>
+										<option value = "" id = "">G6 PD</option>
+										<option value = "" id = "">Montux Test</option>
+										<option value = "" id = "">Blood Group & Rh Factor</option>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">Urine Test</option>
+										<option value = "" id = "">Urine Routine</option>
+										<option value = "" id = "">Stool Routine</option>
+										<option value = "" id = "">Urine Sugar/Ketone/PSBP</option>
+										<option value = "" id = "">Albumin</option>
+										<option value = "" id = "">24 Hrs. Urinary Proteins</option>
+										<option value = "" id = "">Semen Analysis</option>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">Serology Test</option>
+										<option value = "" id = "">HIV I & II</option>
+										<option value = "" id = "">Australla Antigen (Hbsag)</option>
+										<option value = "" id = "">VDRL HCV</option>
+										<option value = "" id = "">CRP</option>
+										<option value = "" id = "">ASO Titre</option>
+										<option value = "" id = "">R A Test</option>
+										<optionvalue = "" id = "">Widal Test</option>
+										<option value = "" id = "">Urine Pregnancy Test</option>
+										<option value = "" id = "">Abo/Rh Titre</option>
+										<option value = "" id = "">Direct/Indirect Coomb's Test</option>
+										<option value = "" id = "">DENGUE - IgG/Igm</option>
+										<option value = "" id = "">DENGUE - NS IAg</option>
+										<option value = "" id = "">LEPTO - IgG/Igm</option>
+										<option value = "" id = "">THYPHI - IgG/Igm</option>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">Biochemistry Test</option>
+										<option value = "" id = "">Blood Sugar F/PP/R</option>
+										<option value = "" id = "">Creatinine</option>
+										<option value = "" id = "">BUN/S. Urea</option>
+										<option value = "" id = "">T. Protein</option>
+										<option value = "" id = "">S. Albumin</option>
+										<option value = "" id = "">S. Biliruin</option>
+										<option value = "" id = "">T. Triglycerides</option>
+										<option value = "" id = "">HDL Cholestrol</option>
+										<option value = "" id = "">Cholestrol</option>
+										<option value = "" id = "">SGOT/SGPT</option>
+										<option value = "" id = "">GGTP</option>
+										<option value = "" id = "">Alk. Phosphates</option>
+										<option value = "" id = "">Acid Phosphates</option>
+										<option value = "" id = "">S. Amylase</option>
+										<option value = "" id = "">Lipase</option>
+										<option value = "" id = "">Uric Acid</option>
+										<option value = "" id = "">CPK - Total</option>
+										<option value = "" id = "">CPK - MB</option>
+										<option value = "" id = "">S. Calcium</option>
+										<option value = "" id = "">S. Phosphorus</option>
+										<option value = "" id = "">S. Electrolytes (Na/K/CL)</option>
+										<option value = "" id = "">Glycocilated Hb (Hb A1C)</option>
+										<option value = "" id = "">LDH</option>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">Micro-Biology Test</option>
+										<option value = "" id = "">Urine/Stool/Sputum</option>
+										<option value = "" id = "">Culture & Sensiulity</option>
+										<option value = "" id = "">Sputum for AFB (3 Samples)</option>
+										<option value = "" id = "">Sputum Routine</option>
+										<option value = "" id = "">Gram's Stain</option>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">Hormones Test</option>
+										<option value = "" id = "">T3/T4 TSH</option>
+										<option value = "" id = "">B. HCG</option>
+										<option value = "" id = "">Prolactine</option>
+										<option value = "" id = "">FSH</option>
+										<option value = "" id = "">LH</option>
+										<option value = "" id = "">Testosterone</option>
+										<option disabled style="background-color:lightgrey;color:black;font-size:18px;">Body Profile Test</option>
+										<option value = "" id = "">Lipid Profile</option>
+										<option value = "" id = "">Liver Function Test</option>
+										<option value = "" id = "">Fever Profile</option>
+										<option value = "" id = "">Renal Profile</option>
+										<option value = "" id = "">Pre - Operative Profile</option>
+										<option value = "" id = "">Anc Profile</option>
+										<option value = "" id = "">Allergy Profile</option>
+										<option value = "" id = "">Arthritis Profile</option>
+										<option value = "" id = "">Cardiac Injury Profile</option>
+										<option value = "" id = "">Diabetic Profile</option>
+										<option value = "" id = "">Hypertension Profile</option>
+										<option value = "" id = "">Total Body Profile</option>
+										<option value = "" id = "">ECG</option>
+										<option value = "" id = "">Basic Profile</option>
+										<option value = "" id = "">Trop T/Trop I</option>
+										<option value = "" id = "">Micro Albumin</option>
+									</select>
+									
+									<label>Special Tests: </label>
+									<select multiple>
+										<option value = "" >B-HCG</option>
+										<option value = "" >F T3, FT4, TSH</option>
+										<option value = "" >FSH</option>
+										<option value = "" >HOMOCYSTINE</option>
+										<option value = "" >L.H.</option>
+										<option value = "" >PROLACTINE</option>
+										<option value = "" >FSH/LH/PROLACTINE</option>
+										<option value = "" >T3, T4, TSH</option>
+										<option value = "" >TSH</option>
+										<option value = "" >A.C.E.</option>
+										<option value = "" >C.E.A.(G.I.MARKAR)</option>
+										<option value = "" >C3</option>
+										<option value = "" >ACTH</option>
+										<option value = "" >C4</option>
+										<option value = "" >ANCA</option>
+										<option value = "" >CD4/CD8 COUNT</option>
+										<option value = "" >ANA</option>
+										<option value = "" >CD4</option>
+										<option value = "" >C.A - 125 (OVARIAN CANCER)</option>
+										<option value = "" >C.A - 15.3 (BREAST CANCER)</option>
+										<option value = "" >C.A - 19.9 (PANCREAS)</option>
+										<option value = "" >DHEAS</option>
+										<option value = "" >DIGOXIN (LANOXIN)</option>
+										<option value = "" >E2 (ESTRADIAL)</option>
+										<option value = "" >E3 (ESTRIOL)</option>
+										<option value = "" >FOLIC ACID</option>
+										<option value = "" >FREE B-HCG</option>
+										<option value = "" >FREE PSA</option>
+										<option value = "" >TOTAL PSA</option>
+										<option value = "" >FREE TESTOSTERONE</option>
+										<option value = "" >Hb - ELECTROPHORESIS</option>
+										<option value = "" >HBeAG</option>
+										<option value = "" >HIV P 24 ANTIGEN</option>
+										<option value = "" >HLA B - 27</option>
+										<option value = "" >INSULIN</option>
+										<option value = "" >IgA/IgE/IgG/IgM</option>
+										<option value = "" >P.T.H.</option>
+										<option value = "" >PROGESTERONE</option>
+										<option value = "" >RETINOL (VIT - A)</option>
+										<option value = "" >RIBOFLAVIN (VIT - B2)</option>
+										<option value = "" >TB Gold</option>
+										<option value = "" >TESTOSTERONE</option>
+										<option value = "" >TORCH - 8</option>
+										<option value = "" >TORCH - 10</option>
+										<option value = "" >TORCH - 13</option>
+										<option value = "" >TRIPLE TEST<sub>1ST 2ND TRIMESTER</sub></option>
+										<option value = "" >VALPROIC ACID</option>
+										<option value = "" >VIT - D3</option>
+										<option value = "" >VIT - D</option>
+										<option value = "" >VIT - E</option>
+										<option value = "" >VIT - C</option>
+										<option value = "" >BIT - B2</option>
+									</select>
+									<br><br>
+									
+									<h1 style = "text-align:center">Your Slected Tests/ Packages</h1>
+									<iframe src = "" width = "100%" height = "100px" > 
+									</iframe>
+									
+									<input type = "submit" value = "Submit" id = "" />
+									<input type = "reset" value = "Reset"  id = "" />
+
+								  </form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+						<div class="subscribe-form">
+							<h1>HONESTY. ACCURACY. QUALITY</h1>
+							
+						</div>
+					</div>
+				</div>
+				
+
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+							<div class="widget">
+								<div class="social-links" style = "text-align:right">
+								<div style = "float:left;text-align:center">
+									<h3>We are Autthorized from: </h3>
+									<img src = "images/ISO.jpg" width = "70px" height = "60px" />
+									<img src = "images/ANSI.png" width = "70px" height = "60px" />
+									<img src = "images/IAF.jpg" width = "70px" height = "60px" />
+								</div style = "float:right;text-align:center">
+									<h3>Connect With Us At: </h3>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+					</div> <!-- .row -->
+
+					<p class="colophon"  style = "text-align:center">copyright © 2017. Designed by 
+					<a href="#" title="Designed by TechFox.com" target="_blank">Manish Tiwari,</a>
+					<a href="#" title="Designed by TechFox.com" target="_blank">Vinit Tiwari & </a>
+					<a href="https://www.facebook.com/akshay.sawant.18400" title="Designed by TechFox.com" target="_blank">Akshay Sawant</a>. All rights reserved</p>
+				</div> <!-- .container -->
+			</footer>
+		</div>
+		
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
